@@ -19,14 +19,27 @@ root notes both live here; the goal is a usable rooted device, not a purist one.
 | OEM unlock props | `ro.oem_unlock_supported=1`, `sys.oem_unlock_allowed=1` |
 | Serial used here | 11862107A012635 |
 
-## Status
+## Status: ROOTED
 
 - [x] Identified, surface enumerated
 - [x] Bootloader unlocked
-- [ ] Boot image obtained
-- [ ] Magisk patched and flashed
-- [ ] Verified root survives reboot
-- [ ] Debloated
+- [x] Boot image obtained (community dump for this model)
+- [x] Magisk patched and flashed, verity and verification disabled
+- [x] Verified root survives reboot (`uid=0 ... u:r:magisk:s0`, SELinux Enforcing)
+- [x] Debloated (12 preloads, list in `debloat-applied.txt`)
+
+Full procedure with gotchas: [STEPS.md](STEPS.md). Failed BROM route: [MTKCLIENT.md](MTKCLIENT.md).
+
+Caveat: the flashed kernel is the dump's 2021-06-07 build, not this unit's 2022-09-03 stock one.
+System build is unchanged (`100011886_20220903`).
+
+## Debloat
+
+Applied with `pm uninstall --user 0`, logged in `debloat-applied.txt`, reversed with
+`pm install-existing <package>`. Removed: Vudu, both Walmart apps, Kids Space, YouTube Kids, Play
+Books, Photos Go, Play Movies, YouTube Music, the MTK factory-test app, the MTK GPS test tool and
+the print recommendation service. Kept Chrome, Maps, Gmail, YouTube, Calendar, keyboard, launcher,
+camera, Play services and store.
 
 ## Bootloader unlock: done
 
