@@ -1,0 +1,12 @@
+air.com.vudu.air.DownloaderTablet
+com.mid.walmartdemo
+com.walmart.android
+com.google.android.apps.kids.home
+com.google.android.apps.youtube.kids
+com.google.android.apps.books
+com.google.android.apps.photosgo
+com.google.android.videos
+com.google.android.apps.youtube.music
+com.mediatek.factorymode
+com.mediatek.ygps
+com.google.android.printservice.recommendation
